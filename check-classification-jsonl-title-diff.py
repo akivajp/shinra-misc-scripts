@@ -49,7 +49,8 @@ with open(classification_json_path, 'r') as f:
         #    break
         d = json.loads(line)
         #logger.debug('d: %s', d)
-        page_id = str(d['pageid'])
+        #page_id = str(d['pageid'])
+        page_id = str(d['page_id'])
         sampled_title = d['title']
         if page_id not in cirrus_id_to_title:
             logger.warning('page_id %s not in cirrus_id_to_title', page_id)
