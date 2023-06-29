@@ -68,7 +68,7 @@ def main(all_jsonl_path, split_jsonl_path, fixed_jsonl_path):
                 logger.warning(f'd_split: {d_split}')
                 logger.warning(f'd_all: {d_all}')
                 logger.warning(f'd_new: {d_new}')
-            json.dump(d_new, f, ensure_ascii=False)
+            f.write(json.dumps(d_new, ensure_ascii=False) + '\n')
 
 if __name__ == '__main__':
     main(sys.argv[1], sys.argv[2], sys.argv[3])
